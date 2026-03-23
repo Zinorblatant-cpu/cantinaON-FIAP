@@ -30,7 +30,7 @@ const MENU_ITEMS = [
   },
 ];
 
-export default function HomeScreen() {
+export default function HomeScreen({ navigation }) {
   const [selectedItems, setSelectedItems] = useState([]);
 
   const selectItem = (item) => {
@@ -50,6 +50,10 @@ export default function HomeScreen() {
     );
   };
 
+  const goToCart = () => {
+    navigation.navigate('Sale', { selectedItems });
+  };
+
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
@@ -57,8 +61,16 @@ export default function HomeScreen() {
       <View style={styles.header}>
         <Text style={styles.title}>🍔 Menu</Text>
 
-        <TouchableOpacity style={styles.cartButton}>
+        <TouchableOpacity 
+          style={styles.cartButton}
+          onPress={goToCart}
+        >
           <Text style={styles.cartIcon}>🛒</Text>
+          {selectedItems.length > 0 && (
+            <View style={styles.badge}>
+              <Text style={styles.badgeText}>{selectedItems.length}</Text>
+            </View>
+          )}
         </TouchableOpacity>
       </View>
 
@@ -106,9 +118,26 @@ const styles = StyleSheet.create({
   },
   cartButton: {
     padding: 8,
+    position: 'relative',
   },
   cartIcon: {
     fontSize: 28,
+  },
+  badge: {
+    position: 'absolute',
+    right: 0,
+    top: 0,
+    backgroundColor: '#2ecc71',
+    borderRadius: 10,
+    minWidth: 20,
+    height: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  badgeText: {
+    color: '#fff',
+    fontSize: 12,
+    fontWeight: 'bold',
   },
   grid: {
     flex: 1,
