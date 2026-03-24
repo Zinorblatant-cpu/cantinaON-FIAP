@@ -26,10 +26,10 @@ export default function ShoppinScreen({ route, navigation }) {
 
   return (
     <View style={styles.container}>
-      <StatusBar style="auto" />
+      <StatusBar style="light" />
       
       <View style={styles.header}>
-        <Text style={styles.title}>🛒 Carrinho</Text>
+        <Text style={styles.title}>🛒 SEU CARRINHO</Text>
       </View>
 
       <View style={styles.itemsContainer}>
@@ -58,7 +58,7 @@ export default function ShoppinScreen({ route, navigation }) {
           disabled={isCartEmpty} 
         >
           <Text style={[styles.payButtonText, isCartEmpty && styles.payButtonTextDisabled]}>
-            Pagar R$ {total.toFixed(2).replace('.', ',')}
+            PAGAR R$ {total.toFixed(2).replace('.', ',')}
           </Text>
         </TouchableOpacity>
       </View>
@@ -68,21 +68,21 @@ export default function ShoppinScreen({ route, navigation }) {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#000000',
     flex: 1,
   },
   header: {
     paddingTop: 50,
     paddingBottom: 20,
-    backgroundColor: '#fff',
+    backgroundColor: '#000000',
     alignItems: 'center',
-    borderBottomWidth: 1,
-    borderBottomColor: '#ddd',
+    borderBottomWidth: 2,
+    borderBottomColor: '#E3000B',
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#333',
+    color: '#E3000B',
   },
   itemsContainer: {
     flex: 1,
@@ -90,14 +90,14 @@ const styles = StyleSheet.create({
   },
   cartItem: {
     flexDirection: 'row',
-    backgroundColor: '#fff',
+    backgroundColor: '#1A1A1A',
     borderRadius: 10,
     padding: 10,
     marginBottom: 10,
     alignItems: 'center',
-    shadowColor: '#000',
+    shadowColor: '#E3000B',
     shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.1,
+    shadowOpacity: 0.2,
     shadowRadius: 2,
     elevation: 3,
   },
@@ -113,46 +113,46 @@ const styles = StyleSheet.create({
   itemName: {
     fontSize: 16,
     fontWeight: '600',
-    color: '#333',
+    color: '#FFFFFF',
     marginBottom: 4,
   },
   itemPrice: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: '#2ecc71',
+    color: '#E3000B',
   },
   itemQuantity: {
     fontSize: 14,
-    color: '#666',
+    color: '#888888',
     marginTop: 2,
   },
   emptyCart: {
     textAlign: 'center',
     fontSize: 18,
-    color: '#999',
+    color: '#888888',
     marginTop: 50,
   },
   footer: {
     padding: 20,
-    backgroundColor: '#fff',
+    backgroundColor: '#000000',
     borderTopWidth: 1,
-    borderTopColor: '#ddd',
+    borderTopColor: '#E3000B',
   },
   payButton: {
-    backgroundColor: '#2ecc71',
+    backgroundColor: '#E3000B',
     borderRadius: 10,
     padding: 15,
     alignItems: 'center',
   },
   payButtonDisabled: {
-    backgroundColor: '#ccc', 
+    backgroundColor: '#333333', 
   },
   payButtonText: {
-    color: '#fff',
+    color: '#FFFFFF',
     fontSize: 18,
     fontWeight: 'bold',
   },
   payButtonTextDisabled: {
-    color: '#999',
+    color: '#666666',
   }
 });

@@ -8,25 +8,25 @@ const MENU_ITEMS = [
     id: 1,
     name: 'paçoca',
     price: 'R$ 1,00',
-    image: require('./assets/57596f11b42e342e491148f4b2c5b018.jpg'),
+    image: require('../assets/57596f11b42e342e491148f4b2c5b018.jpg'),
   },
   {
     id: 2,
     name: 'pao de batata',
     price: 'R$ 6,00',
-    image: require('./assets/78815a4d1e94961c988524b13385288c.jpg'),
+    image: require('../assets/78815a4d1e94961c988524b13385288c.jpg'),
   },
   {
     id: 3,
     name: 'cachorro quente',
     price: 'R$ 10,00',
-    image: require('./assets/a7e28508d953b4855de4610f24276302.jpg'),
+    image: require('../assets/a7e28508d953b4855de4610f24276302.jpg'),
   },
   {
     id: 4,
     name: 'coxinha',
     price: 'R$ 8,00',
-    image: require('./assets/d9aac6fcffc571291deb0c7288811d04.jpg'),
+    image: require('../assets/d9aac6fcffc571291deb0c7288811d04.jpg'),
   },
 ];
 
@@ -35,15 +35,15 @@ export default function HomeScreen({ navigation }) {
 
   const selectItem = (item) => {
     Alert.alert(
-      '🍽️ Item selected',
+      '🍽️ Item selecionado',
       `${item.name} - ${item.price}`,
       [
-        { text: 'Cancel', style: 'cancel' },
+        { text: 'Cancelar', style: 'cancel' },
         { 
-          text: 'Add to cart', 
+          text: 'Adicionar ao carrinho', 
           onPress: () => {
             setSelectedItems([...selectedItems, item]);
-            Alert.alert('✅ Success!', `${item.name} added to cart`);
+            Alert.alert('✅ Sucesso!', `${item.name} adicionado ao carrinho`);
           }
         }
       ]
@@ -56,10 +56,10 @@ export default function HomeScreen({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <StatusBar style="auto" />
+      <StatusBar style="light" />
 
       <View style={styles.header}>
-        <Text style={styles.title}>🍔 Menu</Text>
+        <Text style={styles.title}>🍔 FIAP BURGER</Text>
 
         <TouchableOpacity 
           style={styles.cartButton}
@@ -97,24 +97,24 @@ export default function HomeScreen({ navigation }) {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#000000',
     flex: 1,
   },
   header: {
     paddingTop: 50,
     paddingBottom: 20,
     paddingHorizontal: 20,
-    backgroundColor: '#fff',
+    backgroundColor: '#000000',
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    borderBottomWidth: 1,
-    borderBottomColor: '#ddd',
+    borderBottomWidth: 2,
+    borderBottomColor: '#E3000B',
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#333',
+    color: '#E3000B',
   },
   cartButton: {
     padding: 8,
@@ -122,12 +122,13 @@ const styles = StyleSheet.create({
   },
   cartIcon: {
     fontSize: 28,
+    color: '#FFFFFF',
   },
   badge: {
     position: 'absolute',
     right: 0,
     top: 0,
-    backgroundColor: '#2ecc71',
+    backgroundColor: '#E3000B',
     borderRadius: 10,
     minWidth: 20,
     height: 20,
@@ -135,7 +136,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   badgeText: {
-    color: '#fff',
+    color: '#FFFFFF',
     fontSize: 12,
     fontWeight: 'bold',
   },
@@ -148,17 +149,17 @@ const styles = StyleSheet.create({
   },
   menuItem: {
     width: '48%', 
-    backgroundColor: '#fff',
+    backgroundColor: '#1A1A1A',
     borderRadius: 10,
     padding: 10,
     marginBottom: 15,
     alignItems: 'center',
-    shadowColor: '#000',
+    shadowColor: '#E3000B',
     shadowOffset: {
       width: 0,
       height: 2,
     },
-    shadowOpacity: 0.1,
+    shadowOpacity: 0.3,
     shadowRadius: 3.84,
     elevation: 5,
   },
@@ -171,7 +172,7 @@ const styles = StyleSheet.create({
   itemName: {
     fontSize: 16,
     fontWeight: '600',
-    color: '#333',
+    color: '#FFFFFF',
     marginBottom: 4,
     textAlign: 'center',
     textTransform: 'capitalize',
@@ -179,6 +180,6 @@ const styles = StyleSheet.create({
   itemPrice: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#2ecc71',
+    color: '#E3000B',
   },
 });

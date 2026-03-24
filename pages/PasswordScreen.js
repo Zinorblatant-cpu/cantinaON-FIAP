@@ -16,10 +16,10 @@ export default function PasswordScreen({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <StatusBar style="auto" />
+      <StatusBar style="light" />
       
       <View style={styles.header}>
-        <Text style={styles.title}>🎫 Sua Senha</Text>
+        <Text style={styles.title}>🎫 SUA SENHA</Text>
       </View>
 
       <View style={styles.passwordContainer}>
@@ -31,7 +31,7 @@ export default function PasswordScreen({ navigation }) {
 
       <View style={styles.footer}>
         <TouchableOpacity style={styles.backButton} onPress={goBackToMenu}>
-          <Text style={styles.backButtonText}>Voltar ao Menu</Text>
+          <Text style={styles.backButtonText}>VOLTAR AO MENU</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -40,21 +40,21 @@ export default function PasswordScreen({ navigation }) {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#000000',
     flex: 1,
   },
   header: {
     paddingTop: 50,
     paddingBottom: 20,
-    backgroundColor: '#fff',
+    backgroundColor: '#000000',
     alignItems: 'center',
-    borderBottomWidth: 1,
-    borderBottomColor: '#ddd',
+    borderBottomWidth: 2,
+    borderBottomColor: '#E3000B',
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#333',
+    color: '#E3000B',
   },
   passwordContainer: {
     flex: 1,
@@ -65,28 +65,28 @@ const styles = StyleSheet.create({
   passwordValue: {
     fontSize: 80,
     fontWeight: 'bold',
-    color: '#2ecc71',
+    color: '#E3000B',
     marginBottom: 20,
   },
   passwordInfo: {
     fontSize: 16,
-    color: '#666',
+    color: '#FFFFFF',
     textAlign: 'center',
   },
   footer: {
     padding: 20,
-    backgroundColor: '#fff',
+    backgroundColor: '#000000',
     borderTopWidth: 1,
-    borderTopColor: '#ddd',
+    borderTopColor: '#E3000B',
   },
   backButton: {
-    backgroundColor: '#2ecc71',
+    backgroundColor: '#E3000B',
     borderRadius: 10,
     padding: 15,
     alignItems: 'center',
   },
   backButtonText: {
-    color: '#fff',
+    color: '#FFFFFF',
     fontSize: 18,
     fontWeight: 'bold',
   },
