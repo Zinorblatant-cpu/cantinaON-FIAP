@@ -1,8 +1,8 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import HomeScreen from './HomeScreen.js';
-import ShoppinScreen from './shoppingCartScreens.js';
-import PasswordScreen from './PasswordScreen.js';
+import HomeScreen from './pages/HomeScreen.js';
+import ShoppinScreen from './pages/shoppingCartScreens.js';
+import PasswordScreen from './pages/PasswordScreen.js';
 
 const Stack = createNativeStackNavigator();
 
