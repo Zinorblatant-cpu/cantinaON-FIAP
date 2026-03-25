@@ -385,13 +385,14 @@ Preencha esta seção com os dados do trabalho acadêmico.
 
 **Autores:**
 
-- Nome do(a) aluno(a) 1
-- Nome do(a) aluno(a) 2
-- Nome do(a) aluno(a) 3
+- RM 565437 - Leonardo Lopes Oliveira 
+- RM 563119 - Lucas
+- RM 563462 - Cadu
+- RM 564878 - Felipe krzyzanovski
 
 **Orientador(a):**
 
-- Nome do(a) orientador(a)
+- Hercules Lima Ramos
 
 **Instituição:**
 
